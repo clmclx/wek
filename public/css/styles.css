@@ -46,7 +46,7 @@ body{
 }
 
 .wek{
-    animation: glitch 1s linear infinite;
+    animation: glitch 2s linear infinite;
 }
 
 .typewriter p {
@@ -58,6 +58,7 @@ body{
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .1em; /* Adjust as needed */
     animation:
+            glitch 2s linear,
             typing 1.5s steps(11, end),
             blink-caret .5s step-end infinite;
     animation-fill-mode: both;
@@ -78,10 +79,10 @@ body{
 
 @keyframes glitch{
     2%,64%{
-        transform: translate(2px,0) skew(0deg);
+        transform: translate(1px,0) skew(0deg);
     }
     4%,60%{
-        transform: translate(-2px,0) skew(0deg);
+        transform: translate(-1px,0) skew(0deg);
     }
     62%{
         transform: translate(0,0) skew(5deg);
@@ -96,7 +97,8 @@ div:after{
 }
 
 div:before{
-    animation: glitchTop 1s linear infinite;
+    animation: glitchTop 10s linear infinite;
+    animation-duration: 50s;
     clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
 }
