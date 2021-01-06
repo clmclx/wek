@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
 
+@font-face {
+    font-family: 'digital';
+    src:  url('digital-7.mono.ttf') format('truetype'),
+    url('digital-7.mono.woff') format('woff');
+
+}
+
 body{
     /*display: flex;*/
     /*width: 100vw;*/
@@ -29,17 +36,17 @@ body{
     /*align-items: center;*/
     /*justify-content: center;*/
     margin: 0;
-    color: lightgreen;
+    color: lawngreen;
     font-size: 96px;
-    font-family: 'Fira Mono', monospace;
+    font-family: monospace;
     letter-spacing: -7px;
 }
 
 .subtitle{
     margin: 0;
-    color: lightgoldenrodyellow;
+    color: lawngreen;
     font-size: 15px;
-    font-family: 'Fira Mono', monospace;
+    font-family: monospace;
     font-style: italic;
     opacity: 0.8;
     /*letter-spacing: -7px;*/
@@ -63,6 +70,12 @@ body{
             blink-caret .5s step-end infinite;
     animation-fill-mode: both;
     animation-delay: 1.5s;
+}
+
+.countdown {
+    color: lawngreen;
+    font-family: digital, monospace;
+    font-size: 50px;
 }
 
 /* The typing effect */
@@ -131,4 +144,104 @@ div:after{
     62%{
         transform: translate(-22px,5px) skew(21deg);
     }
+}
+
+.clock {
+    height:50px;
+    width:700px;
+    text-align:center;
+}
+
+.digit {
+    width:60px;
+    height:100px;
+    margin:0 2px;
+    position:relative;
+    display:inline-block;
+}
+
+.digit .segment {
+    background:lawngreen;
+    border-radius:4px;
+    position:absolute;
+    opacity:0.1;
+    transition:opacity 0.1s;
+    -webkit-transition:opacity 0.1s;
+    -ms-transition:opacity 0.1s;
+    -moz-transition:opacity 0.1s;
+    -o-transition:opacity 0.1s;
+}
+
+.digit .segment.on, .separator {
+    opacity:1;
+    box-shadow:0 0 0px lawngreen;
+    transition:opacity 0s;
+    -webkit-transition:opacity 0s;
+    -ms-transition:opacity 0s;
+    -moz-transition:opacity 0s;
+    -o-transition:opacity 0s;
+}
+
+.separator {
+    width:10px;
+    height:10px;
+    background:lawngreen;
+    border-radius:50%;
+    display:inline-block;
+    position:relative;
+    top:-45px;
+}
+
+.digit .segment:nth-child(1) {
+    top:5px;
+    left:10px;
+    right:10px;
+    height:5px;
+}
+
+.digit .segment:nth-child(2) {
+    top:10px;
+    right:5px;
+    width:5px;
+    height:37px;
+    height:calc(50% - 12px);
+}
+
+.digit .segment:nth-child(3) {
+    bottom:10px;
+    right:5px;
+    width:5px;
+    height:37px;
+    height:calc(50% - 12px);
+}
+
+.digit .segment:nth-child(4) {
+    bottom:5px;
+    right:10px;
+    height:5px;
+    left:10px;
+}
+
+.digit .segment:nth-child(5) {
+    bottom:10px;
+    left:5px;
+    width:5px;
+    height:37px;
+    height:calc(50% - 12px);
+}
+
+.digit .segment:nth-child(6) {
+    top:10px;
+    left:5px;
+    width:5px;
+    height:37px;
+    height:calc(50% - 12px);
+}
+
+.digit .segment:nth-child(7) {
+    bottom:47px;
+    bottom:calc(50% - 2px);
+    right:10px;
+    left:10px;
+    height:5px;
 }
