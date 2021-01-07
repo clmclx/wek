@@ -76,16 +76,16 @@ body{
      color: lawngreen;
      font-family: digital, monospace;
      font-size: 50px;
-     animation: 5s fadeIn;
-     animation-delay: 4s;
+     animation: 3.5s fadeIn;
+     animation-delay: 2s;
      animation-fill-mode: forwards;
      visibility: hidden;
  }
 
 .sound {
-    animation: 5s;
-    animation-delay: 4s;
-    animation-fill-mode: forwards;
+    /*animation: 5s;*/
+    /*animation-delay: 5s;*/
+    /*animation-fill-mode: forwards;*/
     visibility: hidden;
 }
 
@@ -159,9 +159,15 @@ div:after{
 
 @keyframes fadeIn {
     0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    50% {
+        opacity: 0;
         visibility: hidden;
     }
     100% {
+        opacity: 1;
         visibility: visible;
     }
 }

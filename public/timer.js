@@ -35,10 +35,3 @@ let x = setInterval(function () {
         document.getElementById("timer").innerHTML = "W.E.K STARTED";
     }
 }, 1000);
-
-
-function playAudio() {
-    document.getElementById('audio').play();
-}
-
-setTimeout("playAudio()", 3000);
