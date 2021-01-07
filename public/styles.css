@@ -73,9 +73,20 @@ body{
 }
 
 .countdown {
-    color: lawngreen;
-    font-family: digital, monospace;
-    font-size: 50px;
+     color: lawngreen;
+     font-family: digital, monospace;
+     font-size: 50px;
+     animation: 5s fadeIn;
+     animation-delay: 4s;
+     animation-fill-mode: forwards;
+     visibility: hidden;
+ }
+
+.sound {
+    animation: 5s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
 }
 
 /* The typing effect */
@@ -143,6 +154,15 @@ div:after{
     }
     62%{
         transform: translate(-22px,5px) skew(21deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
     }
 }
 
